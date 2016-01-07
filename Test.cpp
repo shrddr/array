@@ -6,6 +6,11 @@ int main() {
 	a.set(0, 42);
 	a.set(1, 69);
 	
+	Array b(a);
+
+	a.set(0, 88);
+	a.set(1, 99);
+
 	for (size_t i = 0; i < a.getsize(); i++)
 		printf("%d\n", a.get(i));
 
