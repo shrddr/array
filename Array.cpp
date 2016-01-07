@@ -6,6 +6,14 @@ Array::Array(size_t size)
 	myData = new int[size];
 }
 
+Array::Array(Array &a)
+{
+	mySize = a.mySize;
+	myData = new int[mySize];
+	for (size_t i = 0; i < a.getsize(); i++)
+		myData[i] = a.myData[i];
+}
+
 Array::~Array()
 {
 	delete[] myData;
