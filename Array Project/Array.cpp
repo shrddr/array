@@ -2,28 +2,28 @@
 
 Array::Array(size_t size)
 {
-	MySize = size;
-	MyData = new int[size];
+	mySize = size;
+	myData = new int[size];
 }
 
 Array::~Array()
 {
-	delete[] MyData;
+	delete[] myData;
 }
 
 void Array::set(size_t i, int val)
 {
-	if (i > MySize) return;
-	MyData[i] = val;
+	if (i > mySize) return;
+	myData[i] = val;
 }
 
 int Array::get(size_t i)
 {
-	if (i > MySize) return 0;
-	return MyData[i];
+	if (i > mySize) return 0;
+	return myData[i];
 }
 
 size_t Array::getsize()
 {
-	return MySize;
+	return mySize;
 }

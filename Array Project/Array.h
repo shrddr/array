@@ -3,8 +3,8 @@
 class Array
 {
 private:
-	int* MyData;
-	size_t MySize;
+	int* myData;
+	size_t mySize;
 public:
 	Array(size_t size);
 	~Array();
