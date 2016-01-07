@@ -3,7 +3,7 @@
 Array::Array(size_t size)
 {
 	mySize = size;
-	myData = new int[size];
+	myData = new int[mySize];
 }
 
 Array::Array(Array &a)
@@ -34,4 +34,13 @@ int Array::get(size_t i)
 size_t Array::getsize()
 {
 	return mySize;
+}
+
+void Array::operator=(Array &a)
+{
+	delete[] myData;
+	mySize = a.mySize;
+	myData = new int[mySize];
+	for (size_t i = 0; i < a.getsize(); i++)
+		myData[i] = a.myData[i];
 }
