@@ -8,8 +8,11 @@ int main() {
 	
 	Array b(a);
 
-	a.set(0, 88);
-	a.set(1, 99);
+	b.set(0, 88);
+	b.set(1, 99);
+
+	Array c(1);
+	c = a;
 
 	for (size_t i = 0; i < a.getsize(); i++)
 		printf("%d\n", a.get(i));
